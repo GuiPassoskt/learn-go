@@ -1,20 +1,49 @@
 package main
 
 import (
-	"github.com/GuiPassoskt/learn-go.git/types"
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
+
+type Veiculo interface {
+	buzinar()
+}
+
+type Carro struct {
+	Fabricante string
+	Modelo     string
+	Ano        int
+}
+
+func (c Carro) buzinar() {
+	fmt.Println(c, "buzinou")
+}
+
+type Moto struct {
+	Fabricante string
+	Ano        int
+}
+
+func (m Moto) buzinar() {
+	fmt.Println(m, "buzinou")
+}
+
+type Pessoa struct {
+	Nome    string
+	Veiculo Veiculo
+}
 
 func main() {
 	r := gin.Default()
 
-	carro := types.Carro{
+	carro := Carro{
 		Fabricante: "Chevrolet",
 		Modelo:     "Blazer",
 		Ano:        2005,
 	}
 
-	joao := types.Pessoa{
+	joao := Pessoa{
 		Nome:    "Joao",
 		Veiculo: carro,
 	}
