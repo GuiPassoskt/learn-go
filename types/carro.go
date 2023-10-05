@@ -7,5 +7,5 @@ type Carro struct {
 }
 
 func (c Carro) buzinar() {
-	print("bi bi")
+	print(c, "buzinou")
 }
