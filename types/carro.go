@@ -1,5 +1,7 @@
 package types
 
+import "fmt"
+
 type Carro struct {
 	Fabricante string
 	Modelo     string
@@ -7,5 +9,5 @@ type Carro struct {
 }
 
 func (c Carro) buzinar() {
-	print(c, "buzinou")
+	fmt.Println(c, "buzinou")
 }
