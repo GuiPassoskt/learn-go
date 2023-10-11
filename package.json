@@ -1,0 +1,20 @@
+{
+  "name": "learn-go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "go run main.go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiPassoskt/learn-go.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuiPassoskt/learn-go/issues"
+  },
+  "homepage": "https://github.com/GuiPassoskt/learn-go#readme"
+}
